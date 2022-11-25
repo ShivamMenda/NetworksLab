@@ -7,14 +7,15 @@ port=9999
 c.connect((machine,port))
 
 while True:
-    print("Recieving the file from server")
-    data=c.recv(1024)
-    fle=str(input("Enter file name to write to:"))
+    f=input("Enter file name to recv")
+    c.send(f.encode())
     try:
+        data=c.recv(1024)
         print("Creating file and saving")
-        with open(f"{fle}.txt","wb") as f:
+        with open("recv.txt","wb") as f:
             f.write(data)
             print("Data recv")
             break
     except:
         print("Error occured")
+        break
