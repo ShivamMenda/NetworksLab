@@ -9,10 +9,10 @@ PART-A: Implement the following using C++/Java/Python
   - [x] B. On the host system, identify the TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPV4statistics, and IPV4 statistics etc. using appropriate tool [hint: netstat]. Explore different options available with the tool.
 
 
-- [ ] 2)Write a program to sort frames using appropriate sorting techniques
+- [x] 2)Write a program to sort frames using appropriate sorting techniques
 
 
-- [ ] 3) Write a program for error detecting code using CRC-CCITT (16- bits).
+- [x] 3) Write a program for error detecting code using CRC-CCITT (16- bits).
 
 - [x] 4) Write a program to find the shortest path between vertices using 
 bellman-ford algorithm.
