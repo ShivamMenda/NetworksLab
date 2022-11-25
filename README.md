@@ -17,7 +17,7 @@ PART-A: Implement the following using C++/Java/Python
 - [x] 4) Write a program to find the shortest path between vertices using 
 bellman-ford algorithm.
 
-- [ ] 5) Using TCP/IP sockets, write a client – server program to make the 
+- [x] 5) Using TCP/IP sockets, write a client – server program to make the 
 client send the file name and to make the server send back the contents
 of the requested file if present
 
