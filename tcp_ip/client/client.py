@@ -7,7 +7,7 @@ port=9999
 c.connect((machine,port))
 
 while True:
-    f=input("Enter file name to recv")
+    f=input("Enter file name to recieve:")
     c.send(f.encode())
     try:
         data=c.recv(1024)
