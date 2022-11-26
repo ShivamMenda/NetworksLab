@@ -11,12 +11,13 @@ while True:
     c,addr=s.accept()
     print("Client connected and sending the file to ",addr)
     f1=c.recv(1024).decode()
-    while True:
-        try:
+    try:
             f=open(f"{f1}.txt",'rb')
-        except:
+    except:
             print("File Not found")
             break
+    while True:
+        
         data=f.read(1024)
         if data:
             print("Sending data")
