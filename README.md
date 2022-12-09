@@ -21,7 +21,7 @@ bellman-ford algorithm.
 client send the file name and to make the server send back the contents
 of the requested file if present
 
-- [ ] 6) Write a program on datagram socket for client/server to display the 
+- [x] 6) Write a program on datagram socket for client/server to display the 
 messages on client side, typed at the server side.
 
 - [x] 7) Write a program for simple RSA algorithm to encrypt and decrypt the 
