@@ -30,6 +30,6 @@ data.
 - [x] 8) Write a program for congestion control using leaky bucket algorithm 
 and token bucket algorithm.
 
-- [ ] 9) Write a program to implement random early detection (RED) 
+- [x] 9) Write a program to implement random early detection (RED) 
 congestion control algorithm.
 
