@@ -1,24 +1,29 @@
+import random
 class Frame:
-    def __init__(self,num,data):
-        self.frameNo = num
-        self.data = data
-    def __str__(self):
-        return f"{self.frameNo}{self.data}"
+    def __init__(self,seqno,data=None):
+        self.seqno=seqno
+        self.data=data
 
-def sort(frames):
-     for i in range(len(frames)-1):
-        for j in range(len(frames)-1-i):
-            if(frames[j].frameNo > frames[j+1].frameNo):
-                frames[j],frames[j+1] = frames[j+1],frames[j]
+n=int(input("enter number"))
 
-n=int(input("Enter the no of frames: "))
+seqlist=[]
+for _ in range(n):
+    r=random.randint(1,n*100)
+    seqlist.append(r)
+print(seqlist)
+
 frames=[]
-print("Enter frames no and data: ")
+for _ in range(n):
+    ch = random.choice(seqlist)
+    frames.append(Frame(ch))
+    seqlist.remove(ch)
+
 for i in range(n):
-    nums,data = input().split()
-    nums = int(nums)
-    frames.append(Frame(nums,data))
-print("Frames after sorting: ")
-sort(frames)
-for i in frames:
-    print(i.frameNo, i.data)
+    frames[i].data = input(f"Enter frame data for sequence number {frames[i].seqno}:  ")
+
+frames.sort(key=lambda x:x.seqno)
+
+print("\n---SORTED FRAMES----")
+for frame in frames:
+    print(f"{frame.seqno} - {frame.data}")
+print()
