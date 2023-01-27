@@ -1,25 +1,27 @@
-
 import java.net.*;
 import java.io.*;
 
 public class tcpClient {
-    public static void main(String[] args) throws Exception {
-        Socket sock=new Socket("127.0.0.1",4000);
-        System.out.println("Enter filename");
-        BufferedReader keyRead=new BufferedReader(new InputStreamReader(System.in));
-        String fname=keyRead.readLine();
-        OutputStream oStream=sock.getOutputStream();
-        PrintWriter printWriter=new PrintWriter(oStream,true);
-        printWriter.println(fname);
-        InputStream inputStream=sock.getInputStream();
-        BufferedReader sockRead=new BufferedReader(new InputStreamReader(inputStream));
+    public static void main(String args[]) throws Exception {
+        Socket sock = new Socket("127.0.0.1", 4000);
+        // reading the file name from keyboard. Uses input stream
+        System.out.print("Enter the file name");
+        BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
+        String fname = keyRead.readLine();
+        // sending the file name to server. Uses PrintWriter
+        OutputStream ostream = sock.getOutputStream();
+        PrintWriter pwrite = new PrintWriter(ostream, true);
+        pwrite.println(fname);
+        // receiving the contents from server. Uses input stream
+        InputStream istream = sock.getInputStream();
+        BufferedReader socketRead = new BufferedReader(new InputStreamReader(istream));
         String str;
-        while ((str=sockRead.readLine())!=null) {
+        while ((str = socketRead.readLine()) != null) // reading line-by-line
+        {
             System.out.println(str);
-            
         }
-        printWriter.close();
-        sockRead.close();
+        pwrite.close();
+        socketRead.close();
         keyRead.close();
         sock.close();
     }

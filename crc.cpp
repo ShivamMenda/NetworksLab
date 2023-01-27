@@ -35,7 +35,7 @@ int crc(char *ip, char *op, char *poly, int mode)
 int main()
 {
     char ip[50], op[50], recv[50];
-    char poly[] = "10001000000100001";
+    char poly[] = "10001";
 
     cout << "Enter the input message in binary" << endl;
     cin >> ip;
