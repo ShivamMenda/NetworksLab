@@ -5,8 +5,7 @@ public class UDPServer {
     public static void main(String[] args) {
         try {
             String message = "Test";
-            int serverPortNumber = Integer.parseInt("4444");
-            ServerSocket connectionSocket = new ServerSocket(serverPortNumber);
+            ServerSocket connectionSocket = new ServerSocket(4444);
             Socket dataSocket = connectionSocket.accept();
             PrintStream socketOutput = new PrintStream(dataSocket.getOutputStream());
             socketOutput.println(message);
