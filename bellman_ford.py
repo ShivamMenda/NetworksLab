@@ -17,7 +17,7 @@ class Graph:
         dist = [maxsize] * self.V
         dist[src] = 0
 
-        for i in range(self.V - 1):
+        for i in range(self.V-1):
             for u, v, w in self.graph:
                 if dist[u] != maxsize and dist[u] + w < dist[v]:
                     dist[v] = dist[u] + w
