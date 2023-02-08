@@ -5,6 +5,7 @@ import java.util.*;
 public class tcpS{
 public static void main(String args[]) throws IOException
 {
+	System.out.println("Server started");
 	ServerSocket ss= new ServerSocket (4999);
 	Socket s=ss.accept();
 	System.out.println("Client Connected\n");
@@ -24,8 +25,7 @@ public static void main(String args[]) throws IOException
 		Scanner openfile= new Scanner(file);
 		while(openfile.hasNextLine())
 		{
-			String filedata=openfile.nextLine();
-			System.out.println(filedata);
+			System.out.println(openfile.nextLine());
 		}
 	openfile.close();
 	}
